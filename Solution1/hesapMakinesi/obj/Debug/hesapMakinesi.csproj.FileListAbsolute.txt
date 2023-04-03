@@ -1,0 +1,11 @@
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\bin\Debug\hesapMakinesi.exe.config
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\bin\Debug\hesapMakinesi.exe
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\bin\Debug\hesapMakinesi.pdb
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.Form1.resources
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.exe
+C:\Users\Lenovo\source\repos\Solution1\hesapMakinesi\obj\Debug\hesapMakinesi.pdb
