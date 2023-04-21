@@ -15,43 +15,52 @@ namespace hesapMakinesi.concreters
         public double add(string text)
         {
             list.Add(text);
-            List<int> liste = new List<int>();
-            int sayı1 = 0; int sayı2 = 0; 
+
+            double sayı1 = 0; double sayı2 = 0; double toplam = 0;
             for (int i = 0; i < text.Length - 1; i++)
             {
-                if (text[i + 1] == '+') { 
-                
-                    sayı1 = Convert.ToInt32(text.Substring(0, i + 1)); sayı2 = Convert.ToInt32(text.Substring(i + 1)); break; }
+
+                 if (text[i + 1] == '+')
+                {
+
+                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1));
+                    sayı2 = Convert.ToDouble(text.Substring(i + 2));
+                    toplam = sayı1 + sayı2; break;
+
+                }
+                else { }
 
             }
-         double   toplam = sayı1 + sayı2;
+
+
             return toplam;
-        }
-         
+        } 
         public double böl(string text)
         {
             list.Add(text);
 
-
-            double sayı1 = 0; double sayı2 = 0; int toplam;
+            double sayı1 = 0; double sayı2 = 0; double toplam = 0;
             for (int i = 0; i < text.Length - 1; i++)
             {
+
                 if (text[i + 1] == '/')
                 {
 
-                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1).ToString()); sayı2 = Convert.ToDouble(text.Substring(i + 2).ToString()); break;
+                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1));
+                    sayı2 = Convert.ToDouble(text.Substring(i + 2));
+                    toplam = sayı1 / sayı2; break;
+
                 }
+                else { }
 
             }
-           double toplamm = sayı1 / sayı2;
-            return toplamm;
+
+
+            return toplam;
         }
 
         public List<char> count(string text)
-        {
-           
-
-            List<char> list =new List<char>();
+        { List<char> list =new List<char>();
             for (int i = 0; i < text.Length; i++) {
                 if (text[i] == '+' ) { list.Add(text[i]); }
                 if (text[i] == '-') { list.Add(text[i]); }
@@ -59,23 +68,18 @@ namespace hesapMakinesi.concreters
                 if (text[i] == '/') { list.Add(text[i]); }
                 if (text[i] == '%') { list.Add(text[i]); }
                 if (text[i] == '^') { list.Add(text[i]); }
-                else { }
-            }
-            return list;
-
-        }
-
+                else { }}            return list;
+}
         public double mod(string text)
         {
             list.Add(text);
-
             double sayı1 = 0; double sayı2 = 0; double toplam;
             for (int i = 0; i < text.Length - 1; i++)
             {
                 if (text[i + 1] == '%')
                 {
-
-                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1)); sayı2 = Convert.ToDouble(text.Substring(i + 2)); break;
+    sayı1 = Convert.ToDouble(text.Substring(0, i + 1));
+                    sayı2 = Convert.ToDouble(text.Substring(i + 2)); break;
                 }
 
             }
@@ -90,14 +94,8 @@ namespace hesapMakinesi.concreters
             string a = "";
             double sayı = 0; double sayı2 = 0; double toplam;int sayaç = 0;
             for (int i = 0; i < text.Length-1 ; i++)
-            {
-
-
-                if (text[i] == '|')
-                {
-
-
-                    sayaç++;
+            {   if (text[i] == '|')
+                {       sayaç++;
                     text = text.Remove(i, 1);
                     a += text[i];
                 }
@@ -126,7 +124,9 @@ namespace hesapMakinesi.concreters
                else if (text[i + 1] == '-')
                 {
 
-                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1)); sayı2 = Convert.ToDouble(text.Substring(i + 2)); toplam = sayı1 - sayı2; break;
+                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1));
+                    sayı2 = Convert.ToDouble(text.Substring(i + 2));
+                    toplam = sayı1 - sayı2; break;
                 
                 }
                 else { }
@@ -154,7 +154,9 @@ namespace hesapMakinesi.concreters
             int u = dizi1.Length; int bb = 0; int uu = 0;
             while (uu < u)
             {
-                if (text[dizi1[uu]] == 'x') { listcarp.Add(Convert.ToDouble(text.Substring(bb, uu))); uu++; bb = uu; }
+                if (text[dizi1[uu]] == 'x')
+                { listcarp.Add(
+                    Convert.ToDouble(text.Substring(bb, uu))); uu++; bb = uu; }
                 else { uu++; }
 
             }
@@ -164,29 +166,23 @@ namespace hesapMakinesi.concreters
             return d;
 
         }
-        public double çarp2(List<double> çarp) {
+        public double çarp2(List<double> çarp)
+        {
             double ç = 1;
-            for (int i = 0; i < çarp.Capacity; i++) {
-
+            for (int i = 0; i < çarp.Capacity; i++)
+            { 
                 ç *= çarp[i];
             }
-
             return ç;
-        
         }
-
-        public double çarp(string text, int[] dizi1)
-        {
-            
-
-
+        public double çarp(string text, int[] dizi1) { 
             double sayı1 = 0; double sayı2 = 0; double toplam;
             for (int i = 0; i < text.Length - 1; i++)
             {
                 if (text[i + 1] == 'x')
                 {
-
-                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1)); sayı2 = Convert.ToDouble(text.Substring(i + 2)); break;
+                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1));
+                    sayı2 = Convert.ToDouble(text.Substring(i + 2)); break;
                 }
 
             }
@@ -206,7 +202,8 @@ namespace hesapMakinesi.concreters
                 if (text[i + 1] == '^')
                 {
 
-                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1)); break;
+                    sayı1 = Convert.ToDouble(text.Substring(0, i + 1));
+                    break;
                 }
 
             }

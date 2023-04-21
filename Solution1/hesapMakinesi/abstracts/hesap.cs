@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 namespace hesapMakinesi.abstracts
 {
  public  interface hesap
-    {
-
-       double add(string text);
+    {  double add(string text);
         double carp(string text, int[] dizi);
         double çarp(string text, int[]dizi1);
         double böl(string text);

@@ -64,10 +64,13 @@ namespace hesapMakinesi
             int lenght = text.Length;
             try
             {
-
-                if (textBox1.Text.Trim() == "+" || textBox1.Text.Trim() == "-" || textBox1.Text.Trim() == "x"
-                    || textBox1.Text.Trim() == "%" || textBox1.Text.Trim() == "/" || textBox1.Text.Trim() == "," ||
-                    textBox1.Text.Trim() == "^2" || textBox1.Text.Trim() == "|")
+      if (textBox1.Text.Trim() == "+" || textBox1.Text.Trim() == "-" ||
+                    textBox1.Text.Trim() == "x"
+                    || textBox1.Text.Trim() == "%" ||
+                    textBox1.Text.Trim() == "/" || 
+                    textBox1.Text.Trim() == "," ||
+                    textBox1.Text.Trim() == "^2" ||
+                    textBox1.Text.Trim() == "|")
                 {
                     throw new Exception("sembol hatası");
                 }
@@ -78,24 +81,25 @@ namespace hesapMakinesi
                     int i = 0; int sayaç = 0; int sayaç2 = 0;
                     while (i < lenght)
                     {
-                        if (sayaç >= 2 || sayaç2 >= 3) { sayaç = 0; sayaç2 = 0; throw new Exception("birden fazla sembol girilemez"); break; }
+                        if (sayaç >= 2 || sayaç2 >= 3) { sayaç = 0; 
+                            sayaç2 = 0;
+                            throw new 
+                                Exception("birden fazla sembol girilemez"); 
+                            break; }
 
-                        if (text[i] == '+' || text[i] == '-' || text[i] == 'x' ||
-                            text[i] == '/' || text[i] == '%' ||
-                            text[i] == '^' || text[i] == ',') { sayaç++; i++; }
+                        if (text[i] == '+' || text[i] == '-' ||
+                            text[i] == 'x' ||
+                            text[i] == '/' 
+                            || text[i] == '%' ||
+                            text[i] == '^'
+                          ) { sayaç++; i++; }
                         if (text[i] == '|')
                         {
                             sayaç2++; i++;
                         }
                         else { i++; }
-
-
                     }
                     int[] dizi1 = dizi(text);
-
-
-
-
                     if (text.Contains("+")) { return sonuc.add(text).ToString(); }
                     if (text.Contains("-")) { return sonuc.remove(text).ToString(); }
                     if (text.Contains("x")) { return sonuc.çarp(text, dizi1).ToString(); }
